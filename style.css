@@ -1,0 +1,264 @@
+/* Basic page styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f7fb;
+    color: #333;
+}
+
+/* Header gives the blog a clear introduction */
+header {
+    text-align: center;
+    background-color: #263c70;
+    color: white;
+    padding: 30px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+/* Main content area */
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+main > h2 {
+    text-align: center;
+}
+
+
+/* Number blocks */
+.number-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 30px 0 50px;
+}
+
+.number-block {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    text-decoration: none;
+    font-size: 40px;
+    font-weight: bold;
+
+    border-radius: 12px;
+
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Four different background colors */
+.block-one {
+    background-color: #e74c3c;
+}
+
+.block-two {
+    background-color: #3498db;
+}
+
+.block-three {
+    background-color: #27ae60;
+}
+
+.block-four {
+    background-color: #8e44ad;
+}
+
+
+/* Hover effect required by the rubric */
+.number-block:hover {
+    transform: translateY(-8px) scale(1.05);
+    opacity: 0.8;
+}
+
+
+/* Destination sections */
+.destination-section {
+    background-color: white;
+    margin: 35px 0;
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 7px solid #263c70;
+
+    /* Gives enough space when the number link jumps here. */
+    scroll-margin-top: 20px;
+}
+
+.destination-section h2 {
+    color: #263c70;
+}
+
+
+/* Ordered list headings */
+.destination-section > ol > li {
+    color: #d35400;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+
+/* Nested city lists */
+.destination-section ul {
+    margin-top: 8px;
+}
+
+.destination-section ul li {
+    color: #2c3e50;
+    font-weight: normal;
+    margin: 6px 0;
+}
+
+
+/* Back to top link */
+.back-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: #263c70;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #263c70;
+    color: white;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+
+/* Makes the number blocks fit smaller screens */
+@media (max-width: 600px) {
+
+    .number-container {
+        flex-wrap: wrap;
+    }
+
+    .number-block {
+        width: 80px;
+        height: 80px;
+    }
+}
+css
+/* Travel Stories table */
+.travel-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px auto 50px;
+    background-color: white;
+}
+
+/* Table borders, headings, and cells */
+.travel-table th,
+.travel-table td {
+    border: 3px solid #3498db;
+    padding: 20px;
+    text-align: center;
+}
+
+.travel-table th {
+    background-color: #263c70;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Alternating row colors make the table easier to read. */
+.travel-table tbody tr:nth-child(odd) {
+    background-color: #f2f8fc;
+}
+
+.travel-table tbody tr:nth-child(even) {
+    background-color: #eaf2f8;
+}
+
+
+/* Travel images */
+.travel-image {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+
+    /* Smoothly changes the image opacity when the user hovers. */
+    opacity: 1;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+
+/* Required image hover effect */
+.travel-image:hover {
+    opacity: 0.55;
+    transform: scale(1.03);
+}
+
+
+/* Information sections at the bottom */
+.story-section {
+    background-color: white;
+    padding: 25px;
+    margin: 30px 0;
+    border-left: 7px solid #3498db;
+    border-radius: 8px;
+
+    /* Helps the browser position the section clearly after clicking
+       an attraction image. */
+    scroll-margin-top: 20px;
+}
+
+.story-section h2 {
+    color: #263c70;
+}
+
+.story-section p {
+    line-height: 1.7;
+}
+
+
+/* Homepage navigation link */
+.home-link {
+    display: inline-block;
+    margin: 20px 0 30px;
+    padding: 12px 20px;
+    background-color: #263c70;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.home-link:hover {
+    opacity: 0.8;
+}
+
+
+/* Makes the table and images easier to use on small screens. */
+@media (max-width: 600px) {
+
+    .travel-table {
+        font-size: 14px;
+    }
+
+    .travel-table th,
+    .travel-table td {
+        padding: 10px;
+    }
+
+    .travel-image {
+        width: 180px;
+        height: 130px;
+    }
+}
